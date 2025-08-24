@@ -6,7 +6,7 @@ import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
 import local_storage_service from "../services/storage";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Cookies from 'js-cookie'
 
 const schema = z.object({
@@ -68,7 +68,7 @@ export function Login() {
                   <input className="bg-gray-900 rounded-md text-white p-3 border-2 border-transparent cursor-pointer hover:bg-lime-400 hover:border-gray-900 hover:text-gray-900 transition" type="submit" />
                </form>
                <hr className="text-gray-900" />
-               <p className="text-center text-gray-900">Não tem cadastro? <a href="/signup" className="bg-gray-900 rounded-md py-1 px-2 text-white hover:underline">cadastre-se</a></p>
+               <p className="text-center text-gray-900">Não tem cadastro? <Link to="/signup" className="bg-gray-900 rounded-md py-1 px-2 text-white hover:underline">cadastre-se</Link></p>
             </div>
          </div>
       </div>

@@ -4,7 +4,7 @@ import * as z from "zod"
 import { useState } from "react"
 import { IoEye, IoEyeOff } from "react-icons/io5"
 import local_storage_service from "../services/storage"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
 
 const schema = z.object({
@@ -73,7 +73,7 @@ export function Signup() {
                   <input className="bg-gray-900 rounded-md text-white p-3 border-2 border-transparent cursor-pointer hover:bg-lime-400 hover:border-gray-900 hover:text-gray-900 transition" type="submit" />
                </form>
                <hr className="text-gray-900" />
-               <p className="text-center text-gray-900">Ja tem cadastro? <a href="/login" className="bg-gray-900 rounded-md py-1 px-2 text-white hover:underline">faça login</a></p>
+               <p className="text-center text-gray-900">Ja tem cadastro? <Link to="/login" className="bg-gray-900 rounded-md py-1 px-2 text-white hover:underline">faça login</Link></p>
             </div>
          </div>
       </div>
